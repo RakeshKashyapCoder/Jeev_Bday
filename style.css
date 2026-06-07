@@ -458,80 +458,72 @@ line-height:1.6;
 }
 
 /* =====================================
-MEMORY WALL
+   MEMORY GALLERY
 ===================================== */
-
-.memory-wall{
-
-
-background:#120F1B;
-
-
-}
 
 .memory-grid{
 
+    width:100%;
 
-width:100%;
+    max-width:1200px;
 
-max-width:1200px;
+    margin:auto;
 
-display:grid;
+    display:grid;
 
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
 
-gap:35px;
-
-
+    gap:30px;
 }
 
 .memory-card{
 
+    background:white;
 
-background:white;
+    padding:15px;
 
-color:#222;
+    border-radius:20px;
 
-padding:20px;
+    overflow:hidden;
 
-border-radius:20px;
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.25);
 
-transition:.35s;
-
-box-shadow:
-0 15px 35px rgba(0,0,0,.25);
-
-
+    transition:.3s;
 }
 
 .memory-card:hover{
 
-
-transform:
-translateY(-10px)
-rotate(2deg);
-
-
+    transform:
+    translateY(-8px);
 }
 
-.memory-card img{
+.memory-card img {
 
     width:100%;
 
     height:auto;
 
-    max-height:500px;
-
-    object-fit:contain;
+    display:block;
 
     border-radius:15px;
 
     margin-bottom:15px;
 
-    background:#111;
+    object-fit:contain;
 
     transition:.4s;
+}
+.memory-card p{
+
+    color:#222;
+
+    margin-top:15px;
+
+    text-align:center;
+
+    font-weight:600;
 }
 
 /* =====================================
@@ -786,4 +778,35 @@ h2{
 .memory-card:hover img{
 
     transform:scale(1.05);
+}
+
+.from-snow{
+
+    display:block;
+
+    margin:15px 0;
+
+    font-family:'Parisienne',cursive;
+
+    font-size:2.8rem;
+
+    color:white;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,.5),
+        0 0 20px rgba(255,255,255,.3);
+}
+/* MOBILE PHOTO FIX */
+
+.memory-card img{
+
+    width:100% !important;
+
+    height:auto !important;
+
+    object-fit:contain !important;
+
+    max-height:none !important;
+
+    object-position:center center !important;
 }
